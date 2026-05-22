@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – Dreel Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <div class="grain"></div>
+
+    <header>
+        <a href="index.html" class="logo">Dreel<span>.</span></a>
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="work.html">Work</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+        <div class="header-right">
+            <button class="theme-toggle" id="themeToggle"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+            <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <p class="label">GET IN TOUCH</p>
+        <h1 class="page-title">Let's <span class="red">Talk</span></h1>
+        <p class="page-sub">Ready to get your site built? Have a question? I'm right here.</p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+
+        <!-- LEFT: Info -->
+        <div class="contact-info reveal">
+            <h2>Don't be a stranger<em>.</em></h2>
+            <p class="contact-body">Whether you know exactly what you want or you're starting from zero — reach out. I respond fast, I'm easy to talk to, and I genuinely want to help you level up your online presence.</p>
+
+            <div class="contact-links">
+
+                <!-- ✏️ REPLACE: YOUR-EMAIL@gmail.com -->
+                <a href="mailto:YOUR-EMAIL@gmail.com" class="contact-link-item">
+                    <div class="cli-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="cli-text">
+                        <span class="cli-label">Email</span>
+                        <span class="cli-val">YOUR-EMAIL@gmail.com</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square cli-arrow"></i>
+                </a>
+
+                <!-- ✏️ REPLACE: YOUR-WHATSAPP-NUMBER (digits only, with country code e.g. 2348012345678) -->
+                <a href="https://wa.me/YOUR-WHATSAPP-NUMBER" target="_blank" class="contact-link-item">
+                    <div class="cli-icon green"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="cli-text">
+                        <span class="cli-label">WhatsApp</span>
+                        <span class="cli-val">Message me directly</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square cli-arrow"></i>
+                </a>
+
+                <!-- ✏️ REPLACE: your Instagram username -->
+                <a href="https://instagram.com/YOUR-INSTAGRAM" target="_blank" class="contact-link-item">
+                    <div class="cli-icon insta"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="cli-text">
+                        <span class="cli-label">Instagram</span>
+                        <span class="cli-val">@YOUR-INSTAGRAM</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square cli-arrow"></i>
+                </a>
+
+                <!-- ✏️ REPLACE: your X/Twitter username -->
+                <a href="https://x.com/YOUR-X-HANDLE" target="_blank" class="contact-link-item">
+                    <div class="cli-icon x"><i class="fa-brands fa-x-twitter"></i></div>
+                    <div class="cli-text">
+                        <span class="cli-label">X (Twitter)</span>
+                        <span class="cli-val">@YOUR-X-HANDLE</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square cli-arrow"></i>
+                </a>
+
+                <!-- ✏️ REPLACE: your Facebook profile/page link -->
+                <a href="https://facebook.com/YOUR-FACEBOOK" target="_blank" class="contact-link-item">
+                    <div class="cli-icon fb"><i class="fa-brands fa-facebook"></i></div>
+                    <div class="cli-text">
+                        <span class="cli-label">Facebook</span>
+                        <span class="cli-val">Dreel Studio</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square cli-arrow"></i>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="contact-form-wrap reveal">
+            <div class="contact-form-card">
+                <h3>Send a Message</h3>
+                <p>Fill this in and I'll get back to you within 24 hours.</p>
+
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="e.g. Alex Johnson" />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="e.g. alex@gmail.com" />
+                </div>
+
+                <div class="form-group">
+                    <label for="service">What do you need?</label>
+                    <select id="service">
+                        <option value="">— Select a service —</option>
+                        <option>Portfolio Website</option>
+                        <option>Landing Page</option>
+                        <option>Creative Redesign</option>
+                        <option>Other / Not Sure</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="5" placeholder="Tell me a bit about what you're looking for…"></textarea>
+                </div>
+
+                <button class="btn-primary form-submit" id="submitBtn" onclick="handleFormSubmit()">
+                    Send Message <i class="fa-solid fa-paper-plane"></i>
+                </button>
+
+                <div class="form-success" id="formSuccess">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Message sent! I'll be in touch soon.</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <p class="footer-logo">Dreel<span>.</span></p>
+            <p class="footer-tagline">Websites for creatives who are ready to be seen.</p>
+        </div>
+        <div class="footer-mid">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="work.html">Work</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-socials">
+                <a href="YOUR-X-LINK" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="YOUR-INSTAGRAM-LINK" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="YOUR-FACEBOOK-LINK" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="YOUR-WHATSAPP-LINK" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <p class="footer-copy">© 2025 Dreel Studio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

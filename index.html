@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreel Studio – Web Designer & Creative</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="grain"></div>
+
+    <!-- HEADER -->
+    <header>
+        <a href="index.html" class="logo">Dreel<span>.</span></a>
+        <nav id="main-nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="services.html">Services</a>
+            <a href="work.html">Work</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-right">
+            <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+            </button>
+            <button class="menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Available for work</div>
+            <h1 class="hero-title">
+                <span class="line-1">WEB</span>
+                <span class="line-2"><em>Designer</em></span>
+                <span class="line-3">& CREATIVE</span>
+            </h1>
+            <p class="hero-desc">I'm an undergrad and creative who knows what it's like to have real talent but no visibility. I build websites that make sure that never holds you back.</p>
+            <div class="hero-actions">
+                <a href="work.html" class="btn-primary">See My Work</a>
+                <a href="contact.html" class="btn-ghost">Let's Talk</a>
+            </div>
+        </div>
+
+        <div class="hero-img-side">
+            <div class="img-frame">
+                <img src="dreel.png" alt="Dreel" class="profile-pic" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="img-placeholder">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Add your photo</span>
+                </div>
+                <div class="img-tag">Dreel Studio</div>
+            </div>
+            <div class="hero-stat-card">
+                <h4>$5</h4>
+                <p>Per website, Quality for a low price </p>
+            </div>
+        </div>
+
+        <div class="hero-blob"></div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            <span>WEB DESIGN</span><span class="mx">✦</span>
+            <span>UI/UX DESIGN</span><span class="mx">✦</span>
+            <span>PORTFOLIO SITES</span><span class="mx">✦</span>
+            <span>LANDING PAGES</span><span class="mx">✦</span>
+            <span>CREATIVE DIRECTION</span><span class="mx">✦</span>
+            <span>WEB DESIGN</span><span class="mx">✦</span>
+            <span>UI/UX DESIGN</span><span class="mx">✦</span>
+            <span>PORTFOLIO SITES</span><span class="mx">✦</span>
+            <span>LANDING PAGES</span><span class="mx">✦</span>
+            <span>CREATIVE DIRECTION</span><span class="mx">✦</span>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <div class="about-left">
+            <p class="label">ABOUT ME</p>
+            <h2>I build websites for creatives who are <em>ready to be seen.</em></h2>
+            <p class="about-body">Instead of charging $100+ like most agencies, I build the same quality website for just $5, because every creative deserves to look professional from day one. I've been in the struggle, I know what it costs to look amateur when your work is anything but.</p>
+            <a href="services.html" class="btn-primary">What I Offer</a>
+        </div>
+        <div class="about-right">
+            <div class="about-card">
+                <i class="fa-solid fa-code"></i>
+                <h4>Clean Code</h4>
+                <p>Every site is hand-coded. No templates, no drag-and-drop.</p>
+            </div>
+            <div class="about-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h4>Fast Delivery</h4>
+                <p>Most sites delivered within 48 hours of receiving your content.</p>
+            </div>
+            <div class="about-card">
+                <i class="fa-solid fa-infinity"></i>
+                <h4>Free Hosting</h4>
+                <p>Hosted on GitHub Pages. Zero monthly fees, forever.</p>
+            </div>
+            <div class="about-card">
+                <i class="fa-solid fa-heart"></i>
+                <h4>Creator First</h4>
+                <p>Built by a creative for creatives. I understand what you need.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES PREVIEW -->
+    <section class="services-preview">
+        <p class="label">WHAT I DO</p>
+        <h2 class="sec-title">Services</h2>
+        <div class="sp-grid">
+            <div class="sp-card">
+                <span class="sp-num">01</span>
+                <i class="fa-solid fa-globe"></i>
+                <h3>[YOUR SERVICE TITLE]</h3>
+                <p>[YOUR SERVICE DESCRIPTION — what you offer, who it's for]</p>
+                <span class="sp-price">From $[YOUR PRICE]</span>
+            </div>
+            <div class="sp-card">
+                <span class="sp-num">02</span>
+                <i class="fa-solid fa-paintbrush"></i>
+                <h3>[YOUR SERVICE TITLE]</h3>
+                <p>[YOUR SERVICE DESCRIPTION — what you offer, who it's for]</p>
+                <span class="sp-price">From $[YOUR PRICE]</span>
+            </div>
+            <div class="sp-card">
+                <span class="sp-num">03</span>
+                <i class="fa-solid fa-mobile-screen"></i>
+                <h3>[YOUR SERVICE TITLE]</h3>
+                <p>[YOUR SERVICE DESCRIPTION — what you offer, who it's for]</p>
+                <span class="sp-price">From $[YOUR PRICE]</span>
+            </div>
+        </div>
+        <a href="services.html" class="btn-ghost center-btn">All Services →</a>
+    </section>
+
+    <!-- WORK PREVIEW -->
+    <section class="work-preview">
+        <p class="label">SELECTED WORK</p>
+        <h2 class="sec-title">Recent Projects</h2>
+        <div class="wp-grid">
+            <div class="wp-card featured">
+                <div class="wp-thumb">
+                    <img src="YOUR-SCREENSHOT-1.jpg" alt="Project" onerror="this.style.display='none'">
+                    <div class="wp-overlay">
+                        <span class="wp-tag">[PROJECT TYPE]</span>
+                        <a href="YOUR-LIVE-LINK-HERE" target="_blank" class="wp-live">View Live ↗</a>
+                    </div>
+                </div>
+                <div class="wp-info">
+                    <h4>[PROJECT TITLE]</h4>
+                    <p>[SHORT PROJECT DESCRIPTION]</p>
+                </div>
+            </div>
+            <div class="wp-card">
+                <div class="wp-thumb">
+                    <img src="YOUR-SCREENSHOT-2.jpg" alt="Project" onerror="this.style.display='none'">
+                    <div class="wp-overlay">
+                        <span class="wp-tag">[PROJECT TYPE]</span>
+                        <a href="YOUR-LIVE-LINK-HERE" target="_blank" class="wp-live">View Live ↗</a>
+                    </div>
+                </div>
+                <div class="wp-info">
+                    <h4>[PROJECT TITLE]</h4>
+                    <p>[SHORT PROJECT DESCRIPTION]</p>
+                </div>
+            </div>
+            <div class="wp-card">
+                <div class="wp-thumb">
+                    <img src="YOUR-SCREENSHOT-3.jpg" alt="Project" onerror="this.style.display='none'">
+                    <div class="wp-overlay">
+                        <span class="wp-tag">[PROJECT TYPE]</span>
+                        <a href="YOUR-LIVE-LINK-HERE" target="_blank" class="wp-live">View Live ↗</a>
+                    </div>
+                </div>
+                <div class="wp-info">
+                    <h4>[PROJECT TITLE]</h4>
+                    <p>[SHORT PROJECT DESCRIPTION]</p>
+                </div>
+            </div>
+        </div>
+        <a href="work.html" class="btn-ghost center-btn">View All Work →</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-top">
+            <p class="footer-logo">Dreel<span>.</span></p>
+            <p class="footer-tagline">Websites for creatives who are ready to be seen.</p>
+        </div>
+        <div class="footer-mid">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="work.html">Work</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-socials">
+                <a href="YOUR-X-LINK" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="YOUR-INSTAGRAM-LINK" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="YOUR-FACEBOOK-LINK" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="YOUR-WHATSAPP-LINK" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <p class="footer-copy">© 2025 Dreel Studio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,540 @@
+/* ═══════════════════════════════════════════════
+   PAGES.CSS — Dreel Studio inner page styles
+   Works alongside style.css
+═══════════════════════════════════════════════ */
+
+/* ─── PAGE HERO ─── */
+.page-hero {
+    padding: 16rem 6% 8rem;
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--border);
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.page-title {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(5rem, 9vw, 11rem);
+    color: var(--text);
+    line-height: 1;
+    margin: 1.2rem 0 2rem;
+    letter-spacing: 0.02rem;
+    transition: color 0.4s ease;
+}
+
+.page-title .red { color: var(--red); }
+
+.page-sub {
+    font-size: 1.8rem;
+    color: var(--text-mid);
+    max-width: 55rem;
+    line-height: 1.7;
+}
+
+/* ─── SERVICES FULL ─── */
+.services-full {
+    padding: 8rem 6%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    background-color: var(--bg);
+    transition: background-color 0.4s ease;
+}
+
+.svc-card {
+    display: flex;
+    gap: 4rem;
+    background-color: var(--bg-card);
+    border: 1.5px solid var(--border);
+    border-radius: 2rem;
+    padding: 5rem 4rem;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease, background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.svc-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: linear-gradient(90deg, var(--red), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.4s ease;
+}
+
+.svc-card:hover::after { transform: scaleX(1); }
+
+.svc-card:hover {
+    border-color: var(--red);
+    box-shadow: var(--shadow);
+    transform: translateY(-4px);
+}
+
+.svc-icon {
+    flex-shrink: 0;
+    width: 7rem; height: 7rem;
+    border-radius: 1.5rem;
+    background-color: var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
+    align-self: flex-start;
+    transition: 0.3s ease;
+}
+
+.svc-card:hover .svc-icon {
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.svc-body { flex: 1; }
+
+.svc-num {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.3rem;
+    color: var(--red);
+    margin-bottom: 1rem;
+    display: block;
+    opacity: 0.7;
+}
+
+.svc-body h3 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    transition: color 0.4s ease;
+}
+
+.svc-body > p {
+    font-size: 1.6rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    max-width: 60rem;
+}
+
+.svc-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 3rem;
+    margin-bottom: 3rem;
+}
+
+.svc-list li {
+    font-size: 1.5rem;
+    color: var(--text-mid);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: color 0.2s ease;
+}
+
+.svc-list li:hover { color: var(--text); }
+
+.svc-list li i {
+    color: var(--red);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.svc-footer {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.svc-price {
+    font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    color: var(--red);
+    letter-spacing: 0.05rem;
+}
+
+/* ─── SERVICES CTA ─── */
+.svc-cta {
+    background-color: var(--bg-alt);
+    padding: 10rem 6%;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.svc-cta h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 5rem;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05rem;
+    transition: color 0.4s ease;
+}
+
+.svc-cta p {
+    font-size: 1.8rem;
+    color: var(--text-mid);
+    margin-bottom: 4rem;
+}
+
+/* ─── WORK FULL ─── */
+.work-full {
+    padding: 8rem 6%;
+    background-color: var(--bg);
+    transition: background-color 0.4s ease;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.work-item {
+    background-color: var(--bg-card);
+    border-radius: 1.8rem;
+    overflow: hidden;
+    border: 1.5px solid var(--border);
+    transition: 0.3s ease, background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.work-item:hover {
+    transform: translateY(-6px);
+    border-color: var(--red);
+    box-shadow: var(--shadow);
+}
+
+.work-thumb {
+    position: relative;
+    height: 24rem;
+    overflow: hidden;
+    background-color: var(--bg-alt);
+}
+
+.work-thumb img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s ease;
+}
+
+.work-item:hover .work-thumb img { transform: scale(1.06); }
+
+/* Placeholder shown when image fails */
+.work-ph {
+    display: none;
+    width: 100%; height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-mid);
+    background-color: var(--bg-alt);
+    position: absolute;
+    top: 0; left: 0;
+}
+
+.work-ph i { font-size: 3.5rem; color: var(--red); opacity: 0.35; }
+.work-ph span { font-size: 1.4rem; font-weight: 600; opacity: 0.5; }
+
+.work-overlay {
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.work-item:hover .work-overlay { opacity: 1; }
+
+.work-tag {
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: var(--red);
+    color: white;
+    padding: 0.5rem 1.4rem;
+    border-radius: 10rem;
+    align-self: flex-start;
+    letter-spacing: 0.05rem;
+}
+
+.work-meta {
+    padding: 2.5rem;
+}
+
+.work-meta h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+    transition: color 0.4s ease;
+}
+
+.work-meta p {
+    font-size: 1.5rem;
+    color: var(--text-mid);
+    line-height: 1.6;
+}
+
+/* ─── CONTACT SECTION ─── */
+.contact-section {
+    padding: 8rem 6%;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 8rem;
+    align-items: start;
+    background-color: var(--bg);
+    transition: background-color 0.4s ease;
+}
+
+.contact-info h2 {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    transition: color 0.4s ease;
+}
+
+.contact-info h2 em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    color: var(--red);
+}
+
+.contact-body {
+    font-size: 1.6rem;
+    color: var(--text-mid);
+    line-height: 1.85;
+    margin-bottom: 4rem;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-link-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 2.5rem;
+    background-color: var(--bg-card);
+    border: 1.5px solid var(--border);
+    border-radius: 1.4rem;
+    cursor: pointer;
+    transition: 0.3s ease, background-color 0.4s ease, border-color 0.4s ease;
+    text-decoration: none;
+}
+
+.contact-link-item:hover {
+    border-color: var(--red);
+    transform: translateX(6px);
+    box-shadow: 0 8px 25px var(--red-glow);
+}
+
+.cli-icon {
+    width: 5rem; height: 5rem;
+    border-radius: 1.2rem;
+    background-color: var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    flex-shrink: 0;
+    transition: 0.3s ease;
+}
+
+/* Brand colors for icons */
+.cli-icon.green { background-color: #25D366; }
+.cli-icon.insta { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.cli-icon.x     { background-color: #000000; }
+.cli-icon.fb    { background-color: #1877F2; }
+
+.contact-link-item:hover .cli-icon { transform: rotate(-5deg) scale(1.05); }
+
+.cli-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.cli-label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    color: var(--text-mid);
+    text-transform: uppercase;
+}
+
+.cli-val {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text);
+    transition: color 0.4s ease;
+}
+
+.cli-arrow {
+    font-size: 1.4rem;
+    color: var(--text-mid);
+    transition: 0.3s ease;
+}
+
+.contact-link-item:hover .cli-arrow {
+    color: var(--red);
+    transform: translate(3px, -3px);
+}
+
+/* ─── CONTACT FORM ─── */
+.contact-form-card {
+    background-color: var(--bg-card);
+    border: 1.5px solid var(--border);
+    border-radius: 2rem;
+    padding: 5rem 4rem;
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.contact-form-card h3 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+    transition: color 0.4s ease;
+}
+
+.contact-form-card > p {
+    font-size: 1.5rem;
+    color: var(--text-mid);
+    margin-bottom: 3.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
+}
+
+.form-group label {
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    color: var(--text);
+    text-transform: uppercase;
+    transition: color 0.4s ease;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background-color: var(--bg-alt);
+    border: 1.5px solid var(--border);
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    font-size: 1.6rem;
+    font-family: 'Cabinet Grotesk', sans-serif;
+    color: var(--text);
+    transition: 0.3s ease, background-color 0.4s ease, border-color 0.4s ease;
+    width: 100%;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-mid);
+    opacity: 0.7;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--red);
+    box-shadow: 0 0 0 3px var(--red-glow);
+    background-color: var(--bg-card);
+    outline: none;
+}
+
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237a7870' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.8rem center;
+    cursor: pointer;
+}
+
+.form-group select option { background-color: var(--bg-card); color: var(--text); }
+
+.form-group textarea { resize: vertical; min-height: 14rem; }
+
+.form-submit {
+    width: 100%;
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    transition: 0.3s ease;
+}
+
+.form-submit i { font-size: 1.5rem; transition: transform 0.3s ease; }
+.form-submit:hover i { transform: translate(3px, -3px); }
+
+.form-success {
+    display: none;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 2rem;
+    padding: 1.8rem 2.5rem;
+    background-color: rgba(37, 211, 102, 0.1);
+    border: 1.5px solid #25D366;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #25D366;
+}
+
+.form-success.show { display: flex; }
+.form-success i { font-size: 2rem; }
+
+/* ─── REVEAL ANIMATION ─── */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+    .svc-list { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+    .work-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-section { grid-template-columns: 1fr; gap: 5rem; }
+    .svc-card { flex-direction: column; gap: 2.5rem; }
+    .svc-icon { align-self: flex-start; }
+}
+
+@media (max-width: 600px) {
+    .page-title { font-size: clamp(4rem, 14vw, 7rem); }
+    .work-grid { grid-template-columns: 1fr; }
+    .contact-form-card { padding: 3.5rem 2.5rem; }
+    .svc-cta h2 { font-size: 3.5rem; }
+    .svc-card { padding: 3.5rem 2.5rem; }
+}
